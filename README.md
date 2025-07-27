@@ -85,6 +85,9 @@ pip install -r requirements.txt
 هذا المشروع تعليمي ومفتوح المصدر، ويمكن تعديله بحرية للأغراض الأكاديمية.
 
 
+----------------------------------------------------------------------------------------------------------------------------------
+
+
 📊 Smart Statistical Analyst
 This project is a web application built using Python and Flask to analyze academic survey data (in CSV or Excel format) and generate professional outputs, including:
 
