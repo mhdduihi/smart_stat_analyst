@@ -1,0 +1,10 @@
+flask
+pandas
+openpyxl
+pyreadstat
+python-docx
+matplotlib
+seaborn
+scipy
+statsmodels
+pingouin

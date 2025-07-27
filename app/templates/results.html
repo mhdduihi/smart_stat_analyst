@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>نتائج التحليل</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">نتائج التحليل</h1>
+
+        <h4>📥 تحميل المخرجات:</h4>
+        <ul>
+            <li><a href="{{ url_for('download_file', filename='word_report.docx') }}">📄 تحميل تقرير Word</a></li>
+            <li><a href="{{ url_for('download_file', filename='excel_summary.xlsx') }}">📊 تحميل ملخص Excel</a></li>
+            <li><a href="{{ url_for('download_file', filename='data_export.sav') }}">📁 تحميل ملف SPSS</a></li>
+        </ul>
+
+        <hr>
+        <h4>📊 الرسوم البيانية</h4>
+        {% if images %}
+            <div class="row">
+                {% for image in images %}
+                    <div class="col-md-6 mb-4">
+                        <img src="{{ url_for('static', filename='charts/' + image) }}" class="img-fluid border" alt="{{ image }}">
+                        <p class="text-center mt-2">{{ image }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>لا توجد رسوم بيانية متاحة.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
